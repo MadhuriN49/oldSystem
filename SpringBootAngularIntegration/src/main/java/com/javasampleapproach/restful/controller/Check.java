@@ -1,0 +1,15 @@
+package com.javasampleapproach.restful.controller;
+
+public class Check {
+
+	public static void main(String[] args) {
+		int a=-8;  
+		int b=10;  
+		System.out.println(~a);
+		System.out.println(++a + a++);//10+12=22  
+		System.out.println(b++ + b++);//10+11=21  
+		
+
+	}
+
+}
