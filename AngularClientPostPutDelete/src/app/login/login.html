@@ -1,37 +1,83 @@
+
+<style>
+.background-class{
+  background-image: url('./assets/images/author.jpg');
+  height: -webkit-fill-available;
+}
+.login{
+  width: 500px;
+  height: 300px;
+  background: rgba(27, 27,27, 0.6);
+  padding: 20px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 100px;
+}
+.login .login-fields input {
+  position: relative;
+  padding: 0 28px;
+  margin-bottom: 12px;
+}
+.login h4 {
+   text-align: center;
+   color: #ffffff; 
+}
+.login .login-fields {
+  position: relative;
+}
+.login .login-fields .fa{
+  position: absolute;
+  top: 28%;
+  left: 2%;
+}
+
+.login .login-fields .btn{
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  border: 1px solid #ffffff;
+}
+
+</style>
+
 <div class="container-fluid background-class"> 
-   <!-- <div class="col-sm-6">  -->
-       <div>
-        <div class="login">
-            <form class="form-row">
-                    <div class="login-fields-header">
-                        <h4>Sign In</h4>
-                    </div><hr>
-               
-                    <div class="login-fields">
-                        <input type="text" class="form-control" placeholder="User Name" name ="user" [(ngModel)] ="user">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </div>
-               
-                    <div class="error" *ngIf="wrongUser">
-                        <p style = " color: red ; padding-left: 58px">Wrong Username</p>
-                    </div>
+ <!-- <div class="col-sm-6">  -->
+     <div>
+      <div class="login">
+          <form class="form-row">
+                  <div class="login-fields-header">
+                      <h4>Sign In</h4>
+                  </div><hr>
+             
+                  <div class="login-fields">
+                      <input type="text" class="form-control" placeholder="User Name" name ="user" [(ngModel)] ="user">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                  </div>
+             
+                  <div class="error" *ngIf="wrongUser">
+                      <p style = " color: red ; padding-left: 58px">Wrong Username</p>
+                  </div>
 
-                    <div class="login-fields" >
-                      <input type="password" class="form-control" placeholder="Password" name ="password" [(ngModel)] = "password" >
-                      <i class="fa fa-key" aria-hidden="true"></i>
-                     
-                    </div>  
-               
-                    <div class="error" *ngIf="wrongPwd">
-                        <p style = " color: red ; padding-left: 58px">Wrong Password</p>
-                    </div>
+                  <div class="login-fields" >
+                    <input type="password" class="form-control" placeholder="Password" name ="password" [(ngModel)] = "password" >
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                   
+                  </div>  
+             
+                  <div class="error" *ngIf="wrongPwd">
+                      <p style = " color: red ; padding-left: 58px">Wrong Password</p>
+                  </div>
 
-                    <div class="login-fields"> 
-                        <button type="submit" class="btn btn-primary" (click) = "submit(user , password)" > Submit</button>
-                    </div>
-              
-            </form>
-        </div>
-    </div>
+                  <div class="login-fields"> 
+                      <button type="submit" class="btn btn-primary" (click) = "submit(user , password)" > Submit</button>
+                  </div>
+            
+          </form>
+      </div>
+  </div>
 </div>
 <!-- </div> -->
