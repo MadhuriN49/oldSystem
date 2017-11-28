@@ -1,21 +1,28 @@
 
 <style>
 .background-class{
-  background-image: url('./assets/images/author.jpg');
-  height: -webkit-fill-available;
+  background-image: url('./assets/images/author.jpg') ;
+  background-repeat: no-repeat;
+  height: 100% ; 
+   /* height: -webkit-fill-available; */
+  /* background-size:     cover;                    
+  background-repeat:   no-repeat;
+  background-position: center center; */
 }
 .login{
-  width: 500px;
-  height: 300px;
   background: rgba(27, 27,27, 0.6);
+  /* width: 500px;
+  height: 300px;
+  
   padding: 20px;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
+  margin: 0 auto; */
+  /* top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  margin-top: 100px;
+  margin-top: 100px; */
+ margin-top: 150px;
+ padding: 30px;
 }
 .login .login-fields input {
   position: relative;
@@ -36,17 +43,20 @@
 }
 
 .login .login-fields .btn{
-  position: absolute;
+  /* position: absolute;
   left: 25%;
-  width: 50%;
+  width: 50%; */
   border: 1px solid #ffffff;
+  text-align: center;
+}
+.login-fields{
+  text-align: center;
 }
 
 </style>
 
 <div class="container-fluid background-class"> 
- <!-- <div class="col-sm-6">  -->
-     <div>
+  <div class="col-md-5 col-md-offset-4 col-sm-5 col-sm-offset-4">  
       <div class="login">
           <form class="form-row">
                   <div class="login-fields-header">
@@ -72,12 +82,19 @@
                       <p style = " color: red ; padding-left: 58px">Wrong Password</p>
                   </div>
 
-                  <div class="login-fields"> 
-                      <button type="submit" class="btn btn-primary" (click) = "submit(user , password)" > Submit</button>
+                  <div class="row">
+                    <div class="col-md-5 col-md-offset-3 col-sm-5 col-sm-offset-3">
+                        <div class="login-fields"> 
+                            <button type="submit" class="btn btn-primary" (click) = "submit(user , password)" > Submit</button>
+                        </div>
+                    </div>
                   </div>
+                  
             
           </form>
       </div>
-  </div>
+      <div class="clearfix"></div>    
 </div>
-<!-- </div> -->
+
+
+ </div> 
