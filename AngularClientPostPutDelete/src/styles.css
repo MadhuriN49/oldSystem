@@ -41,7 +41,7 @@ body,html{
     width: 250px;
     height: 420px;
     margin: 15px auto ;
-    background:  linen;
+    background:  whitesmoke;
     position: relative;
   }
   .content img{
@@ -105,7 +105,28 @@ body,html{
     color: darkorange;
     border: none;
   }
-
+  .rating{
+    background: transparent;
+    border: none;
+    padding: 0px; 
+  }
+  textarea{
+    background: #ffeb3b2b !important;
+  }
+  .userReadStory{
+    /* width: 1000px;
+    height: 600px; */
+    background: whitesmoke;
+    border: 1px solid lightgray;
+    border-radius: 5px ;
+    padding : 10px; 
+  }
+  .rated{
+    background: transparent;
+    border: none;
+    padding: 0px; 
+    color: cornflowerblue ;
+  }
 @media only screen and (max-width: 991px) {
   .addToDashboard {
       font-size: 38px;
@@ -115,6 +136,7 @@ body,html{
     font-size: 12px;
     padding-right: 2px;
   } 
+
   /* .background-class{
    width: 800px;
    height : 800px;

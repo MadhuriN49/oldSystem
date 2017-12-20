@@ -16,7 +16,7 @@
       <div *ngFor ="let dashboardContent of dashboardContents ; let i = index; trackBy: trackByFn">
           <div class="col-md-4">
               <div class="content">
-              <span class="contentRead"> <a href="readStory"> <img src= {{dashboardContent.imgPath}} alt="image"> </a>
+              <span class="contentRead"> <!-- <a href="readStory"> </a> --> <img src= {{dashboardContent.imgPath}} alt="image"> 
                <button class="btn btn-primary" (click) = "readContent(dashboardContent)"> Read</button> </span>
                 <div class="delete"*ngIf="canAddDelete" ><button (click) = "deleteAuthor(dashboardContent)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>
                 <div class="person-info"> 
@@ -24,7 +24,23 @@
                       <!-- <p>  {{dashboardContent.content}}</p> -->
                       <h5>{{dashboardContent.authorName}} </h5>
                       <h5> Date : {{dashboardContent.datePosted}}</h5> 
+                      <!-- <span *ngIf="canAddDelete" >
+                          <button class="rated"  (click) ="rating(1)"><i class="fa fa-star" aria-hidden="true"></i></button>
+                          <button class="rated"  (click) ="rating(2)"> <i class="fa fa-star" aria-hidden="true"></i></button>
+                          <button class="rated"  (click) ="rating(3)"> <i class="fa fa-star" aria-hidden="true"></i></button>
+                          <button class="rated"  (click) ="rating(4)"> <i class="fa fa-star" aria-hidden="true"></i></button>
+                          <button class="rated"  (click) ="rating(5)"><i class="fa fa-star" aria-hidden="true"></i></button>
+                      </span> 
+                      <span *ngIf="!canAddDelete" >
+                          <button class="rating"  (click) ="rating(1)"><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                          <button class="rating"  (click) ="rating(2)"> <i class="fa fa-star-o" aria-hidden="true"></i></button>
+                          <button class="rating"  (click) ="rating(3)"> <i class="fa fa-star-o" aria-hidden="true"></i></button>
+                          <button class="rating"  (click) ="rating(4)"> <i class="fa fa-star-o" aria-hidden="true"></i></button>
+                          <button class="rating"  (click) ="rating(5)"><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                      </span> 
+                       -->
                   </div>
+                  
               </div>
           </div>
     </div>

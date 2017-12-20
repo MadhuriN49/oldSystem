@@ -26,6 +26,7 @@ export class DashboardComponent implements OnInit{
         if(this.dataService.loggedStatus() == true){
             sessionStorage.getItem('loggedInUser');
             // this.background = true ;
+            
         }
          else{
             sessionStorage.setItem('loggedInUser', '');
@@ -44,7 +45,9 @@ export class DashboardComponent implements OnInit{
             this.canAddDelete = true;
         }
         
-        return this.dataService.getDashboard().then(dashboardContents => this.dashboardContents = dashboardContents);
+        return this.dataService.getDashboard().then(
+            dashboardContents => this.dashboardContents = dashboardContents
+        );
     //    var newItems = JSON.parse(localStorage.getItem("addMore"));
        
     //     for (let newItem of newItems) {
@@ -65,8 +68,14 @@ export class DashboardComponent implements OnInit{
     }
 
     readContent(dashboardContent : Dashboard){
-      sessionStorage.setItem("readStory", dashboardContent.content);
+      sessionStorage.setItem("readStory", JSON.stringify(dashboardContent));
+     // sessionStorage.setItem("readStoryId", );
       window.location.href = "readStory"; 
+    }
+
+    rating(value : number){
+        //this.dataService
+        console.log(value);
     }
 
 }

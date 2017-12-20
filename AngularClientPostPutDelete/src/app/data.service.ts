@@ -12,7 +12,7 @@ import { Dashboard } from './dashboard/dashboard';
 @Injectable()
 export class DataService {
 
-  private customersUrl = 'api/customer';  // URL to web API
+  private customersUrl = 'api/customer';  
   private dashboardUrl = 'api/dashboard';
   private headers = new Headers({'Content-Type': 'application/json'});
 
@@ -49,7 +49,20 @@ export class DataService {
       .catch(this.handleError);
   }
 
+  updateAuthor(dashboard: Dashboard): Promise<Dashboard> {
+    const url = `${this.dashboardUrl}/${dashboard.id}`;
+    return this.http
+      .post(url, JSON.stringify(dashboard), {headers: this.headers})
+      .toPromise()
+      .then(() => dashboard)
+      .catch(this.handleError);
+  }
 
+
+
+
+
+  
 // Get all customers
 getCustomers(): Promise<Customer[]> {
   return this.http.get(this.customersUrl)
@@ -95,7 +108,7 @@ getCustomers(): Promise<Customer[]> {
   
 
   private handleError(error: any): Promise<any> {
-    console.error('Error', error); // for demo purposes only
+    console.error('Error', error); 
     return Promise.reject(error.message || error);
   }
 }

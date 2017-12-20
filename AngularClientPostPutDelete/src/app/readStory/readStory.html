@@ -1,15 +1,18 @@
-<div class="container" style="background: #FFFFEB;">
+<div class="container">
     <h2> Story </h2>
     <form>
       <div class="form-group">
         <!-- <label for="comment">Content:</label> -->
-        <textarea class="form-control" rows="20" id="comment" *ngIf="canAdd">{{content}}</textarea>
-        <div>
-          <p>{{content}}</p>
+        <!-- <div  *ngIf="canAddDelete">
+            <textarea class="form-control" rows="20" id="comment" name = "content" [(ngModel)] ="dashboard.content">{{dashboard.content}}</textarea>
+        </div> -->
+        <div class="userReadStory">
+            <p>{{dashboard.content}}</p>
         </div>
        
       </div>
     </form>
     <button class="btn btn-primary" (click) = "goBack()"> Back</button>
+    <!-- <button class="btn btn-primary" *ngIf="canAddDelete" (click) = "updateStory(dashboard)">Update</button> -->
   </div>
   

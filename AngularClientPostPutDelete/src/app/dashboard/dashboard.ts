@@ -5,4 +5,5 @@ export class Dashboard {
     authorName : string ;
     datePosted : string;
     imgPath: string ;
+    //rating : number ;
 }

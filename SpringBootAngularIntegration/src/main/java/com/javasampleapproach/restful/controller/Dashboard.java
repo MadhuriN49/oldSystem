@@ -8,7 +8,8 @@ public class Dashboard {
 	private String authorName ;
 	private String datePosted;
 	private String imgPath;
-	
+	//private int rating;
+
 	public Dashboard() {
 		
 	}
@@ -20,6 +21,7 @@ public class Dashboard {
 		this.authorName = authorName;
 		this.datePosted = datePosted;
 		this.imgPath = imgPath;
+		//this.rating = rating ;
 	}
 	
 	public Dashboard(String title, String content, String authorName, String datePosted, String imgPath) {
@@ -28,6 +30,7 @@ public class Dashboard {
 		this.authorName = authorName;
 		this.datePosted = datePosted;
 		this.imgPath = imgPath;
+		//this.rating = rating ;
 	}
 	
 	public int getId() {
@@ -69,4 +72,12 @@ public class Dashboard {
 		this.imgPath = imgPath;
 	}
 	
+//	public int getRating() {
+//		return rating;
+//	}
+//
+//	public void setRating(int rating) {
+//		this.rating = rating;
+//	}
+//	
 }
